@@ -1,0 +1,49 @@
+{
+  "client": [
+    {
+      "gstNo": "JHGFDFGHJ",
+      "name": "MHGF",
+      "country": "KJH",
+      "latitude": "986521",
+      "longitude": "86521",
+      "panNo": "JHGFCVB65",
+      "address": "KJHGF",
+      "state": "HG",
+      "mobileNo": "8754568555",
+      "code": "544",
+      "pinCode": "581320",
+      "city": "JHGF",
+      "email": "darshan@gmail.com",
+      "currency": "RUPEES",
+      "person_name": "JKHGF",
+      "department": "KLJHGF",
+      "contactNo": "8660231458",
+      "designation": "JHGFD",
+      "Email": "dahan@gmail.com",
+      "id": 1
+    },
+    {
+      "gstNo": "JHGFDFGHJ",
+      "name": "MHGF",
+      "country": "KJH",
+      "latitude": "986521",
+      "longitude": "86521",
+      "panNo": "JHGFCVB65",
+      "address": "KJHGF",
+      "state": "HG",
+      "mobileNo": "8754568555",
+      "code": "544",
+      "pinCode": "581320",
+      "city": "JHGF",
+      "email": "darshan@gmail.com",
+      "currency": "RUPEES",
+      "person_name": "JKHGF",
+      "department": "KLJHGF",
+      "contactNo": "8660231458",
+      "designation": "JHGFD",
+      "Email": "dahan@gmail.com",
+      "id": 2
+    }
+  
+  ]
+}
