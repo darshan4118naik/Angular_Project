@@ -1,0 +1,10 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .row .mat-form-field {
+    width: calc(33.33% - 1px);
+  }
+  
