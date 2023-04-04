@@ -62,6 +62,25 @@ export class ClientListComponent implements OnInit {
         }
     
     }
+
+    DataSource = new MatTableDataSource;
+
+  
+    applyFilter(filterValue: string) {
+      this.DataSource.filter = filterValue.trim().toLowerCase();
+    }
+  
+    clearSearch() {
+      this.DataSource.filter = '';
+    }
+  
+    filterPredicate(clientlist: any, filter: string): boolean {
+      const searchString = filter.trim().toLowerCase();
+      return Object.values(this.clientlist).some(value => {
+        const stringValue = String(value).toLowerCase();
+        return stringValue.includes(searchString);
+      });
+    }
   }
 
 

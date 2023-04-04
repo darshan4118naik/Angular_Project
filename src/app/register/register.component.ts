@@ -57,7 +57,6 @@ export class RegisterComponent
           this.toastr.success('Data added successfully.');
           this.form.reset();
           console.log("33333")
-
         });
       }
         else {console.log("4444444")

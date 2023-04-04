@@ -18,9 +18,9 @@ export class Service {
     }
 
   
-    addData(data:any): Observable<any> {
+    addData(data:any): Observable<any[]> {
         console.log("55555")
-        return this.http.post(this.apiUrl, data);
+        return this.http.post<any[]>(this.apiUrl, data);
         
       }
 

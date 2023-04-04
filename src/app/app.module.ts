@@ -8,6 +8,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {ToastrModule} from 'ngx-toastr';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 
 
 import { HomeComponent } from './home/home.component';
@@ -38,7 +39,8 @@ import { Service } from './service';
     ReactiveFormsModule,
     HttpClientModule,
     ToastrModule.forRoot(),
-    RouterLink
+    RouterLink,
+    MatIconModule
   ],
   providers: [Service],
   bootstrap: [AppComponent]
