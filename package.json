@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "dev-server": "json-server ./db.json --watch"
   },
   "private": true,
   "dependencies": {
@@ -22,7 +23,6 @@
     "@angular/router": "^15.2.0",
     "bootstrap": "^5.2.3",
     "jquery": "^3.6.4",
-    "json-server": "^0.17.3",
     "ngx-toastr": "^16.1.0",
     "popper.js": "^1.16.1",
     "rxjs": "~7.8.0",

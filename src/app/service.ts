@@ -15,24 +15,19 @@ export class Service {
     getData(): Observable<any[]> {
       console.log("33333")
         return this.http.get<any[]>(this.apiUrl);
-    }
-
-  
+    }    
     addData(data:any): Observable<any[]> {
         console.log("55555")
         return this.http.post<any[]>(this.apiUrl, data);
         
-      }
-
-   
-  
-
+    }
     updateData(data: any): Observable<any> {
         return this.http.put<any>(this.apiUrl, data);
     }
 
-    deleteData(data: any): Observable<any> {
-        return this.http.delete<any>(this.apiUrl, data);
+    deleteData(id: number): Observable<any> {
+      console.log(id);
+        return this.http.delete(this.apiUrl+'/'+'${id}');
     }
 }
 

@@ -1,30 +1,28 @@
-<form [formGroup]="form" (ngSubmit)="registerForm()">
-    <mat-card-title style="text-align: center">Add/Update Data</mat-card-title>
+<form [formGroup]="companyForm" class="ng-container" (ngSubmit)="saveCompanyData() ">
+    <mat-card-title class="title">Add/Update Data</mat-card-title>
     <mat-card>
         <mat-card-content>
 
             <div class="row">
                 <div class="col-md-4">
                     <mat-label>GST NO : </mat-label>
-                    <mat-form-field>
-                        <input matInput formControlName="gstNo">
-                        <mat-error *ngIf="form?.get('gstNo')?.invalid">GST No is required.</mat-error>
+                    <mat-form-field appearance="outline">
+                        <input matInput formControlName="GST_No">
+                        <mat-error *ngIf="companyForm?.get('GST_No')?.invalid">GST No is required.</mat-error>
                     </mat-form-field>
                 </div>
 
                 <div class="col-md-4">
                     <mat-label>Name : </mat-label>
-                    <mat-form-field>
-                        <input matInput formControlName="name">
-                        <mat-error *ngIf="form?.get('name')?.invalid">Name is required.</mat-error>
+                    <mat-form-field appearance="outline"> <input matInput formControlName="Name">
+                        <mat-error *ngIf="companyForm?.get('Name')?.invalid">Name is required.</mat-error>
                     </mat-form-field>
                 </div>
 
                 <div class="col-md-4">
-                    <mat-label>Country : </mat-label>
-                    <mat-form-field>
-                        <input matInput formControlName="country">
-                        <mat-error *ngIf="form?.get('country')?.invalid">Country is required.</mat-error>
+                    <mat-label>Address :</mat-label>
+                    <mat-form-field appearance="outline"> <textarea matInput formControlName="Address"></textarea>
+                        <mat-error *ngIf="companyForm?.get('Address')?.invalid">Address is required.</mat-error>
                     </mat-form-field>
                 </div>
             </div>
@@ -32,134 +30,125 @@
             <div class="row">
                 <div class="col-md-4">
                     <mat-label>Latitude :</mat-label>
-                    <mat-form-field>
-                        <input matInput formControlName="latitude">
-                        <mat-error *ngIf="form?.get('latitude')?.invalid">Latitude is required.</mat-error>
+                    <mat-form-field appearance="outline"> <input matInput formControlName="Latitude">
+                        <mat-error *ngIf="companyForm?.get('Latitude')?.invalid">Latitude is required.</mat-error>
                     </mat-form-field>
                 </div>
 
                 <div class="col-md-4">
                     <mat-label>Longitude :</mat-label>
-                    <mat-form-field>
-                        <input matInput formControlName="longitude">
-                        <mat-error *ngIf="form?.get('longitude')?.invalid">Longitude is required.</mat-error>
+                    <mat-form-field appearance="outline"> <input matInput formControlName="Longitude">
+                        <mat-error *ngIf="companyForm?.get('Longitude')?.invalid">Longitude is required.</mat-error>
                     </mat-form-field>
                 </div>
 
                 <div class="col-md-4">
                     <mat-label>PAN No :</mat-label>
-                    <mat-form-field>
-                        <input matInput formControlName="panNo">
-                        <mat-error *ngIf="form?.get('panNo')?.invalid">PAN No is required.</mat-error>
+                    <mat-form-field appearance="outline"> <input matInput formControlName="PAN_No">
+                        <mat-error *ngIf="companyForm?.get('PAN_No')?.invalid">PAN No is required.</mat-error>
                     </mat-form-field>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-md-4">
-                    <mat-label>Address :</mat-label>
-                    <mat-form-field>
-                        <textarea matInput formControlName="address"></textarea>
-                        <mat-error *ngIf="form?.get('address')?.invalid">Address is required.</mat-error>
+                    <mat-label>Country : </mat-label>
+                    <mat-form-field appearance="outline"> <input matInput formControlName="Country">
+                        <mat-error *ngIf="companyForm?.get('Country')?.invalid">Country is required.</mat-error>
                     </mat-form-field>
                 </div>
+
+
 
                 <div class="col-md-4">
                     <mat-label>State :</mat-label>
-                    <mat-form-field>
-                        <input matInput formControlName="state">
-                        <mat-error *ngIf="form?.get('state')?.invalid">State is required.</mat-error>
+                    <mat-form-field appearance="outline"> <input matInput formControlName="State">
+                        <mat-error *ngIf="companyForm?.get('State')?.invalid">State is required.</mat-error>
                     </mat-form-field>
                 </div>
-
                 <div class="col-md-4">
-                    <mat-label>MobileNo :</mat-label>
-                    <mat-form-field>
-                        <input matInput formControlName="mobileNo">
-                        <mat-error *ngIf="form?.get('mobileNo')?.invalid">Mobile No is required.</mat-error>
+                    <mat-label>City :</mat-label>
+                    <mat-form-field appearance="outline"> <input matInput formControlName="City">
+                        <mat-error *ngIf="companyForm?.get('City')?.invalid">City is required.</mat-error>
                     </mat-form-field>
                 </div>
             </div>
+
 
             <div class="row">
                 <div class="col-md-4">
                     <mat-label>Code :</mat-label>
-                    <mat-form-field>
-                        <input matInput formControlName="code">
-                        <mat-error *ngIf="form?.get('code')?.invalid">Code is required.</mat-error>
+                    <mat-form-field appearance="outline"> <input matInput formControlName="Code">
+                        <mat-error *ngIf="companyForm?.get('Code')?.invalid">Code is required.</mat-error>
                     </mat-form-field>
                 </div>
 
                 <div class="col-md-4">
-                    <mat-label>PinCode :</mat-label>
-                    <mat-form-field>
-                        <input matInput formControlName="pinCode">
-                        <mat-error *ngIf="form?.get('pinCode')?.invalid">PinCode is required.</mat-error>
+                    <mat-label>Pincode :</mat-label>
+                    <mat-form-field appearance="outline"> <input matInput formControlName="Pincode">
+                        <mat-error *ngIf="companyForm?.get('Pincode')?.invalid">PinCode is required.</mat-error>
                     </mat-form-field>
                 </div>
 
+
+
                 <div class="col-md-4">
-                    <mat-label>City :</mat-label>
-                    <mat-form-field>
-                        <input matInput formControlName="city">
-                        <mat-error *ngIf="form?.get('city')?.invalid">City is required.</mat-error>
+                    <mat-label>MobileNo :</mat-label>
+                    <mat-form-field appearance="outline"> <input matInput formControlName="MobileNo">
+                        <mat-error *ngIf="companyForm?.get('MobileNo')?.invalid">Mobile No is required.</mat-error>
                     </mat-form-field>
                 </div>
             </div>
-
             <div class="row">
                 <div class="col-md-4">
                     <mat-label>Email :</mat-label>
-                    <mat-form-field>
-                        <input matInput formControlName="email">
-                        <mat-error *ngIf="form?.get('email')?.invalid">Email is required and must be a valid email</mat-error>
+                    <mat-form-field appearance="outline"> <input matInput formControlName="Email">
+                        <mat-error *ngIf="companyForm?.get('Email')?.invalid">Email is required and must be a valid
+                            email</mat-error>
                     </mat-form-field>
                 </div>
 
                 <div class="col-md-4">
-                    <mat-label>Currency :</mat-label>
-                    <mat-form-field>
-                        <input matInput formControlName="currency">
-                        <mat-error *ngIf="form?.get('currency')?.invalid">Currency is required.</mat-error>
+                    <mat-label>Currency:</mat-label>
+                    <mat-form-field appearance="outline">
+                        <mat-select formControlName="Currency">
+                            <mat-option value="USD">USD</mat-option>
+                            <mat-option value="EUR">EUR</mat-option>
+                            <mat-option value="GBP">GBP</mat-option>
+                            <mat-option value="JPY">Rupees</mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="companyForm?.get('Currency')?.invalid">Currency is required.</mat-error>
                     </mat-form-field>
                 </div>
-            </div>
 
-            <mat-card>
-                <mat-card-title style="text-align: center">Contact Personal Details</mat-card-title>
-                <mat-card-content>
+            </div>
+            <form [formGroup]="personalForm" class="ng-container" (ngSubmit)="savePersonalData() ">
+
+                <mat-card>
+                    <mat-card-title>Contact Personal Details</mat-card-title>
+
 
                     <div class="row">
                         <div class="col-md-4">
                             <mat-label>Name :</mat-label>
-                            <mat-form-field>
-                                <input matInput formControlName="person_name">
-                                <mat-error *ngIf="form?.get('person_name')?.invalid">person_name is
+                            <mat-form-field appearance="outline"> <input matInput formControlName="PName">
+                                <mat-error *ngIf="personalForm?.get('PName')?.invalid">person_name is
                                     required.</mat-error>
                             </mat-form-field>
                         </div>
 
                         <div class="col-md-4">
                             <mat-label>Department :</mat-label>
-                            <mat-form-field>
-                                <input matInput formControlName="department">
-                                <mat-error *ngIf="form?.get('department')?.invalid">department is required.</mat-error>
+                            <mat-form-field appearance="outline"> <input matInput formControlName="Department">
+                                <mat-error *ngIf="personalForm?.get('Department')?.invalid">department is
+                                    required.</mat-error>
                             </mat-form-field>
                         </div>
 
                         <div class="col-md-4">
-                            <mat-label>ContactNo :</mat-label>
-                            <mat-form-field>
-                                <input matInput formControlName="contactNo">
-                                <mat-error *ngIf="form?.get('contactNo')?.invalid">contactNo is required.</mat-error>
-                            </mat-form-field>
-                        </div>
-
-                        <div class="col-md-4">
-                            <mat-label>Designation :</mat-label>
-                            <mat-form-field>
-                                <input matInput formControlName="designation">
-                                <mat-error *ngIf="form?.get('designation')?.invalid">designation is
+                            <mat-label>Mobile :</mat-label>
+                            <mat-form-field appearance="outline"> <input matInput formControlName="Mobile">
+                                <mat-error *ngIf="personalForm?.get('Mobile')?.invalid">contactNo is
                                     required.</mat-error>
                             </mat-form-field>
                         </div>
@@ -167,20 +156,39 @@
 
                     <div class="row">
                         <div class="col-md-4">
+                            <mat-label>Designation :</mat-label>
+                            <mat-form-field appearance="outline"> <input matInput formControlName="Designation">
+                                <mat-error *ngIf="personalForm?.get('Designation')?.invalid">designation is
+                                    required.</mat-error>
+                            </mat-form-field>
+                        </div>
+
+
+
+                        <div class="col-md-4">
                             <mat-label>Email :</mat-label>
-                            <mat-form-field>
-                                <input matInput formControlName="Email">
-                                <mat-error *ngIf="form?.get('Email')?.invalid">Email is required.</mat-error>
+                            <mat-form-field appearance="outline"> <input matInput formControlName="PEmail">
+                                <mat-error *ngIf="personalForm?.get('PEmail')?.invalid">Email is
+                                    required.</mat-error>
                             </mat-form-field>
                         </div>
                     </div>
-                </mat-card-content>
-            </mat-card>
-        </mat-card-content>
 
-    </mat-card>
-    <div>
-        <button mat-raised-button color="primary" type="submit">Save</button>
-        <button mat-raised-button color="accent" onclick="this.form.reset()" style="margin-left :10px;">Cancel</button>
-    </div>
+                </mat-card>
+                <div class="mat-button" id='personal-data-button'>
+                    <button mat-raised-button color="primary">Add</button>
+                    <button mat-raised-button color="accent" onclick="this.form.reset()"
+                        style="margin-left :10px;">Cancel</button>
+                </div>
+            </form>
+            
+
+            <div class="mat-button " id="company-data-button">
+                <button mat-raised-button color="primary">Save</button>
+                <button mat-raised-button color="accent" onclick="this.form.reset()"
+                    style="margin-left :10px;">Cancel</button>
+            </div>
+        </mat-card-content>
+     </mat-card>
+    
 </form>

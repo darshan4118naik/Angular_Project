@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from 'src/material_module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import {ToastrModule} from 'ngx-toastr';
+import { ToastrModule } from 'ngx-toastr';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -14,9 +14,19 @@ import { MatIconModule } from '@angular/material/icon';
 import { HomeComponent } from './home/home.component';
 
 import { RegisterComponent } from './register/register.component';
-import { ClientListComponent } from './client-list/client-list.component';
-import { RouterLink } from '@angular/router';
+
+import { Router, RouterLink } from '@angular/router';
 import { Service } from './service';
+
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { ClientlistComponent } from './clientlist/clientlist.component';
+
 
 
 
@@ -26,9 +36,9 @@ import { Service } from './service';
   declarations: [
     AppComponent,
     RegisterComponent,
-   ClientListComponent,
+    ClientlistComponent,
     HomeComponent,
-       
+    ClientlistComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,8 +49,15 @@ import { Service } from './service';
     ReactiveFormsModule,
     HttpClientModule,
     ToastrModule.forRoot(),
-    RouterLink,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatInputModule
+    
   ],
   providers: [Service],
   bootstrap: [AppComponent]

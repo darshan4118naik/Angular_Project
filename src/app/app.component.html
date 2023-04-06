@@ -1,11 +1,11 @@
 
-<div class="content" style="width: 100%; display: block;" role="main">
-  <span>Welcome</span>
-  <a routerLink="" style="color: white; margin-left: 10px;" >Home</a>
-  <!-- <a **ngIf="isadmin" routerLink="user" >User</a> -->
-  <a routerLink="/clients" >Clients</a>
-  <div class="spacer"></div>
-  <a routerLink="/register">Register</a>
+<mat-toolbar color="primary">
+  
+ <span>My App</span>
+ <span class="example-spacer"></span>
+ <button mat-raised-button (click)="clientlists() " >Client List</button>
+ <button mat-raised-button (click)="  addclient() " >Add Client</button>
+ 
+</mat-toolbar>
+<router-outlet></router-outlet>
 
-  <router-outlet></router-outlet>
-</div>
