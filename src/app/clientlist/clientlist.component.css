@@ -5,10 +5,39 @@ table {
   
   .mat-mdc-form-field {
     font-size: 14px;
-    width: 100%;
+    /* width: 100%; */
+    padding-top: 25px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left: 1000px;
   }
   
-  td, th {
-    width: 25%;
+  td {
+    width: 100%;
   }
+  th{
+    width: 100%;
+  }
+
+  .bar
+  {
+    
+    padding-bottom: 5px;
+  }
+
+  .mat-elevation-z8{
+    padding-top: 5px;
+   
+  }
+  .icon{
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+.green-color {
+  color:green;
+}
+  
+ 
   

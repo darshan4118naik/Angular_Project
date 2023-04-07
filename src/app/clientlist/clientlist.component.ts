@@ -1,11 +1,11 @@
-import { Component, Inject, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit,  ViewChild } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MatTableDataSource } from '@angular/material/table';
 import { Service } from '../service';
 import { ToastrService } from 'ngx-toastr';
-import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-clientlist',
@@ -13,23 +13,24 @@ import { MatSort } from '@angular/material/sort';
   styleUrls: ['./clientlist.component.css']
 })
 export class ClientlistComponent implements OnInit {
+
   clientlist: any;
   dataSource!: MatTableDataSource<any>;
+
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
 
   constructor(
     private builder: FormBuilder,
     private service: Service,
     private toastr: ToastrService,
-  ) {
-
-  }
+    private router:Router
+  ) {}
 
   displayedColumns: string[] = [
     'action',
-    'id',
     'Name',
     'Code',
-    'Name',
     'Address',
     'Country',
     'State',
@@ -37,25 +38,16 @@ export class ClientlistComponent implements OnInit {
     'MobileNo',
     'Email',
     'GST_No',
-    'PAN_No',
-
-    'Latitude',
-    'Longitude',
-    'Pincode',
-    'Currency',
-
-    'PName',
-    'Department',
-    'Mobile',
-    'Designation',
-    'PEmail'
+    'PAN_No'
   ];
 
   ngOnInit(): void {
       this.getData();
   }
  
-  getData(): void {
+   // <-------------To GET The Data------------>
+  getData(): void 
+  {
     console.log("111111");
     this.service.getData().subscribe(
       res => {
@@ -68,16 +60,34 @@ export class ClientlistComponent implements OnInit {
         console.log("dataSource:", this.dataSource);
       });
   }
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
-  @ViewChild(MatSort) sort!: MatSort;
 
-  applyFilter(event: Event) {
+   // <-------------To SEARCH The Data------------>
+  applyFilter(event: Event) 
+  {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
-
-    if (this.dataSource.paginator) {
+    if (this.dataSource.paginator) 
+    {
       this.dataSource.paginator.firstPage();
     }
   }
+ 
+   // <-------------To DELETE The Data------------>
+  deleteclient(id: number): void 
+  {
+    console.log(id);
+    if (confirm('Are you sure you want to delete this data?')) 
+    {
+      this.service.deleteData(id).subscribe(
+        res => {
+          console.log(id);
+          this.toastr.success('Data deleted successfully.');
+          this.getData();
+        });
+      }
+        else 
+        {
+          this.toastr.error('Error deleting data.');
+        }
+  }
 }
-

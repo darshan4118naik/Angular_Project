@@ -1,0 +1,56 @@
+{
+  "client": [
+    {
+      "GST_No": "2AB15CV008",
+      "Name": "DARSHAN",
+      "Country": "INDIA",
+      "Latitude": "25.154",
+      "Longitude": "32.155",
+      "PAN_No": "CAD5866A",
+      "Address": "MOODBHATKAL,BHATKAL",
+      "State": "KARNATAKA",
+      "MobileNo": "8660238131",
+      "Code": "001",
+      "Pincode": "581320",
+      "City": "BHATKAL",
+      "Email": "da@gmail.com",
+      "Currency": "JPY",
+      "id": 1
+    },
+    {
+      "GST_No": "",
+      "Name": "",
+      "Country": "",
+      "Latitude": "",
+      "Longitude": "",
+      "PAN_No": "",
+      "Address": "",
+      "State": "",
+      "MobileNo": "",
+      "Code": "",
+      "Pincode": "",
+      "City": "",
+      "Email": "",
+      "Currency": "",
+      "id": 2
+    }
+  ],
+  "personal": [
+    {
+      "Name": "Darshan",
+      "Department": "DEVELOPMENT",
+      "Mobile": "8867696331",
+      "Designation": "DEVELOPER",
+      "Email": "da@gmail.com",
+      "id": 1
+    },
+    {
+      "Name": "",
+      "Department": "",
+      "Mobile": "",
+      "Designation": "",
+      "Email": "",
+      "id": 2
+    }
+  ]
+}

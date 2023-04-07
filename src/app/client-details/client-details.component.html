@@ -1,0 +1,39 @@
+<mat-card class="example-card text-center">
+    <mat-card-header class="justify-content-center">
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{clientDetails.Name}} </mat-card-title>
+
+    </mat-card-header>
+
+    <mat-card-content>
+        <mat-list>
+            <mat-list-item>
+                <div matLine>
+                    Mobile Number :
+                    <button mat-button>{{clientDetails.Mobile}}</button>
+                </div>
+            </mat-list-item>
+
+            <mat-list-item>
+                <div matLine>
+                    Email :
+                    <button mat-button>{{clientDetails.Email}}</button>
+                </div>
+            </mat-list-item>
+
+            <mat-list-item>
+                <div matLine>
+                    Department :
+                    <button mat-button>{{clientDetails.Department}}</button>
+                </div>
+            </mat-list-item>
+            <mat-list-item>
+                <div matLine>
+                    Designation :
+                    <button mat-button>{{clientDetails.Designation}}</button>
+                </div>
+            </mat-list-item>
+
+        </mat-list>
+    </mat-card-content>
+</mat-card>

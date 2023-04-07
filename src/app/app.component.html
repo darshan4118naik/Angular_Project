@@ -1,11 +1,12 @@
-
 <mat-toolbar color="primary">
-  
- <span>My App</span>
- <span class="example-spacer"></span>
- <button mat-raised-button (click)="clientlists() " >Client List</button>
- <button mat-raised-button (click)="  addclient() " >Add Client</button>
- 
+  <div class="example-button-container">
+    <button mat-fab color="warn" aria-label="Example icon button with a home icon" routerLink="/home">
+      <mat-icon>home</mat-icon>
+    </button>
+  </div>
+  <span>Bill To Party Master</span>
+  <span class="example-spacer"></span>
+  <a mat-raised-button routerLink="/clients">Client List</a>
+  <button mat-raised-button (click)="  addclient() ">Add Client</button>
 </mat-toolbar>
 <router-outlet></router-outlet>
-

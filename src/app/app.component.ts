@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { RegisterComponent } from './register/register.component';
-import { ClientlistComponent } from './clientlist/clientlist.component';
-
 
 @Component({
   selector: 'app-root',
@@ -12,21 +10,11 @@ import { ClientlistComponent } from './clientlist/clientlist.component';
 export class AppComponent {
   title = 'angular_client';
   
-  constructor(private dialog:MatDialog )
-  {
+  constructor(private dialog:MatDialog ) {}
 
-  }
-
+  // <---------To open dialog box for Client Register----->
   addclient()
   {
    this.dialog.open(RegisterComponent);
   }
-
-clientlists()
-  {
-    this.dialog.open(ClientlistComponent);
-    
-  }
-
- 
 }

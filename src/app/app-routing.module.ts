@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-
 import { RegisterComponent } from './register/register.component';
 import { ClientlistComponent } from './clientlist/clientlist.component';
-
-
+import { ClientDetailsComponent } from './client-details/client-details.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  {path:'',component:HomeComponent},
-  {path:'clients',component:ClientlistComponent},
-  {path:'register',component:RegisterComponent}
+  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'clients', component: ClientlistComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'update/:id', component: RegisterComponent },
+  { path: 'details/:id', component: ClientDetailsComponent }
 ];
 
 @NgModule({
