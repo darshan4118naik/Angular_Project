@@ -87,8 +87,18 @@ export class UpdateComponent implements OnInit {
         this.ispersonalDataUpdated=true;
         this.personalDataListBYId.forEach(element => {
   
-          this.fillPersonalDataFormToUpdate(element)
           
+    
+            this.personalForm.setValue({
+              
+              'Name': element.Name,
+              'Department': element.Department,
+              'Mobile': element.Mobile,
+              'Designation': element.Designation,
+              'Email': element.Email
+            });
+          
+            this.personaldataLisToUpdate.push(this.personalForm.value);
         });
         
         
@@ -98,17 +108,8 @@ export class UpdateComponent implements OnInit {
     
   }
 
+
   
-  fillPersonalDataFormToUpdate(element: any) {
-    this.personalForm.setValue({
-      'id':element.id,
-      'Name': element.Name,
-      'Department': element.Department,
-      'Mobile': element.Mobile,
-      'Designation': element.Designation,
-      'Email': element.Email
-    });
-  }
 
   fillCompanyDataFormToUpdate(companyData: any) {
     this.companyForm.setValue({

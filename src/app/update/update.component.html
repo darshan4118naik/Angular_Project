@@ -123,12 +123,12 @@
                 </div>
 
             </div>
-            <form [formGroup]="personalForm" class="ng-container" (ngSubmit)="update() ">
+            <form [formGroup]="personalForm" class="ng-container" (ngSubmit)="update() " *ngFor="let data of personalDataListBYId">
 
                 <mat-card>
                     <mat-card-title>Contact Personal Details</mat-card-title>
 
-                    <div *ngFor="let data of personalDataListBYId">
+                    <div >
                     <div class="row">
                         <div class="col-md-4">
                             <mat-label>Name :</mat-label>
@@ -174,37 +174,14 @@
                             </mat-form-field>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Department</th>
-                                        <th>Mobile</th>
-                                        <th>Designation</th>
-                                        <th>Email</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr *ngFor="let data of personaldataList">
-                                        <td>{{ data.Name }}</td>
-                                        <td>{{ data.Department }}</td>
-                                        <td>{{ data.Mobile }}</td>
-                                        <td>{{ data.Designation }}</td>
-                                        <td>{{ data.Email }}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                   
                 </div>
                 </mat-card>
-                <div class="mat-button" id='personal-data-button'>
+                <!-- <div class="mat-button" id='personal-data-button'>
                     <button mat-raised-button color="primary">Add</button>
                     <button mat-raised-button color="accent" onclick="this.form.reset()"
                         style="margin-left :10px;">Cancel</button>
-                </div>
+                </div> -->
                 
             </form>
 
