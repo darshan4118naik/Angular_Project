@@ -1,10 +1,10 @@
-<mat-card class="example-card text-center">
+<div *ngFor="let clientDetails of clientDetails">
+<mat-card class="example-card text-center" >
     <mat-card-header class="justify-content-center">
         <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title>{{clientDetails.Name}} </mat-card-title>
 
     </mat-card-header>
-
     <mat-card-content>
         <mat-list>
             <mat-list-item>
@@ -33,7 +33,6 @@
                     <button mat-button>{{clientDetails.Designation}}</button>
                 </div>
             </mat-list-item>
-
         </mat-list>
     </mat-card-content>
-</mat-card>
+</mat-card></div>

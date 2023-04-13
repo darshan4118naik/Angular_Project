@@ -22,6 +22,8 @@ import { ClientlistComponent } from './clientlist/clientlist.component';
 import { ClientDetailsComponent } from './client-details/client-details.component';
 import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './home/home.component';
+import { MatCardModule } from '@angular/material/card';
+import { UpdateComponent } from './update/update.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +32,8 @@ import { HomeComponent } from './home/home.component';
     ClientlistComponent,
     ClientDetailsComponent,
     HomeComponent,
+    UpdateComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -48,7 +52,8 @@ import { HomeComponent } from './home/home.component';
     MatSortModule,
     MatFormFieldModule,
     MatInputModule,
-    MatListModule
+    MatListModule,
+    MatCardModule
 
   ],
   providers: [Service],

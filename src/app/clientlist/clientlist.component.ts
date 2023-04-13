@@ -48,10 +48,8 @@ export class ClientlistComponent implements OnInit {
    // <-------------To GET The Data------------>
   getData(): void 
   {
-    console.log("111111");
     this.service.getData().subscribe(
       res => {
-        console.log("222222");
         this.clientlist = res;
         console.log("clientlist:", this.clientlist);
         this.dataSource = new MatTableDataSource(this.clientlist);
@@ -75,12 +73,10 @@ export class ClientlistComponent implements OnInit {
    // <-------------To DELETE The Data------------>
   deleteclient(id: number): void 
   {
-    console.log(id);
     if (confirm('Are you sure you want to delete this data?')) 
     {
       this.service.deleteData(id).subscribe(
         res => {
-          console.log(id);
           this.toastr.success('Data deleted successfully.');
           this.getData();
         });

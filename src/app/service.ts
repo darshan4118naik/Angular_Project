@@ -8,25 +8,22 @@ import { Injectable } from '@angular/core';
 })
 
 export class Service {
-  companyBaseUrl = 'http://localhost:3002/client';
-  personalBaseUrl = 'http://localhost:3002/personal';
+  companyBaseUrl = 'http://localhost:4005/company';
+  personalBaseUrl = 'http://localhost:4005/personal';
 
   constructor(private http: HttpClient) { }
 
-  
+
   // <-------------To Get The Data------------>
   getData(): Observable<any[]> {
-    console.log("33333")
     return this.http.get<any[]>(this.companyBaseUrl);
   }
 
   // <-------------To PUT The Data------------>
   addData(data: any): Observable<any[]> {
-    console.log("55555")
     return this.http.post<any[]>(this.companyBaseUrl, data);
   }
   addPersonalData(data: any): Observable<any[]> {
-    console.log("55555")
     return this.http.post<any[]>(this.personalBaseUrl, data);
   }
 
@@ -43,7 +40,8 @@ export class Service {
     return this.http.get<any>(this.companyBaseUrl + '/' + id)
   }
   getPersonalDataBYId(id: number) {
-    return this.http.get<any>(this.personalBaseUrl + '/' + id)
+    console.log("1111111111111")
+    return this.http.get<any[]>(this.personalBaseUrl + '/' + id)
   }
 
   // <-------------To DELETE The Data------------>
@@ -53,6 +51,4 @@ export class Service {
       this.http.delete<any[]>(`${this.personalBaseUrl}/${id}`)
     ]);
   }
-
-
 }

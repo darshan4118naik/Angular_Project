@@ -1,56 +1,49 @@
 {
-  "client": [
+  "company": [
     {
-      "GST_No": "2AB15CV008",
-      "Name": "DARSHAN",
-      "Country": "INDIA",
-      "Latitude": "25.154",
-      "Longitude": "32.155",
-      "PAN_No": "CAD5866A",
-      "Address": "MOODBHATKAL,BHATKAL",
-      "State": "KARNATAKA",
-      "MobileNo": "8660238131",
-      "Code": "001",
-      "Pincode": "581320",
-      "City": "BHATKAL",
-      "Email": "da@gmail.com",
-      "Currency": "JPY",
+      "GST_No": "HJ",
+      "Name": "GJ",
+      "Country": " V",
+      "Latitude": "MV,",
+      "Longitude": "LKCM",
+      "PAN_No": "VFFK",
+      "Address": "J",
+      "State": "VK",
+      "MobileNo": "0987654321",
+      "Code": "354",
+      "Pincode": "546655",
+      "City": "FK",
+      "Email": "ds@f.n",
+      "Currency": "USD",
       "id": 1
-    },
-    {
-      "GST_No": "",
-      "Name": "",
-      "Country": "",
-      "Latitude": "",
-      "Longitude": "",
-      "PAN_No": "",
-      "Address": "",
-      "State": "",
-      "MobileNo": "",
-      "Code": "",
-      "Pincode": "",
-      "City": "",
-      "Email": "",
-      "Currency": "",
-      "id": 2
     }
   ],
   "personal": [
-    {
-      "Name": "Darshan",
-      "Department": "DEVELOPMENT",
-      "Mobile": "8867696331",
-      "Designation": "DEVELOPER",
-      "Email": "da@gmail.com",
-      "id": 1
-    },
-    {
-      "Name": "",
-      "Department": "",
-      "Mobile": "",
-      "Designation": "",
-      "Email": "",
-      "id": 2
-    }
+    [
+      {
+        "Name": "A",
+        "Department": "BH",
+        "Mobile": "0987654321",
+        "Designation": "JKBG",
+        "Email": "ds@f.n",
+        "id": 1
+      },
+      {
+        "Name": "B",
+        "Department": "BH",
+        "Mobile": "0987654321",
+        "Designation": "JKBG",
+        "Email": "ds@f.n",
+        "id": 1
+      },
+      {
+        "Name": "C",
+        "Department": "BH",
+        "Mobile": "0987654321",
+        "Designation": "JKBG",
+        "Email": "ds@f.n",
+        "id": 1
+      }
+    ]
   ]
 }

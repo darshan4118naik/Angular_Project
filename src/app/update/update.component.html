@@ -1,4 +1,4 @@
-<!-- This form uses Angular Material design components to display a user interface for entering and updating company data. The form contains fields for entering a company's GST number, name, address, latitude and longitude coordinates, PAN number, country, state, city, postal code, mobile number, email address, and currency. The form also includes validation to ensure that all required fields are filled out, and that email addresses are in the correct format. -->
+
 <form [formGroup]="companyForm" class="ng-container">
     <mat-card-title class="title">Add/Update Data</mat-card-title>
     <mat-card>
@@ -123,24 +123,26 @@
                 </div>
 
             </div>
-            <form [formGroup]="personalForm" class="ng-container"  (ngSubmit)="savePersonalData() ">
-                
-                <mat-card  >
-                    <mat-card-title  >Contact Personal Details</mat-card-title>
-                    
+            <form [formGroup]="personalForm" class="ng-container" (ngSubmit)="update() ">
 
-                    <div class="row" >
+                <mat-card>
+                    <mat-card-title>Contact Personal Details</mat-card-title>
+
+                    <div *ngFor="let data of personalDataListBYId">
+                    <div class="row">
                         <div class="col-md-4">
                             <mat-label>Name :</mat-label>
                             <mat-form-field appearance="outline"> <input matInput formControlName="Name">
-                                <mat-error *ngIf="personalForm?.get('Name')?.invalid">person_name is required.</mat-error>
+                                <mat-error *ngIf="personalForm?.get('Name')?.invalid">person_name is
+                                    required.</mat-error>
                             </mat-form-field>
                         </div>
 
                         <div class="col-md-4">
                             <mat-label>Department :</mat-label>
                             <mat-form-field appearance="outline"> <input matInput formControlName="Department">
-                                <mat-error *ngIf="personalForm?.get('Department')?.invalid">department is required.</mat-error>
+                                <mat-error *ngIf="personalForm?.get('Department')?.invalid">department is
+                                    required.</mat-error>
                             </mat-form-field>
                         </div>
 
@@ -196,21 +198,20 @@
                             </table>
                         </div>
                     </div>
-                
+                </div>
                 </mat-card>
                 <div class="mat-button" id='personal-data-button'>
                     <button mat-raised-button color="primary">Add</button>
                     <button mat-raised-button color="accent" onclick="this.form.reset()"
                         style="margin-left :10px;">Cancel</button>
                 </div>
-
+                
             </form>
 
 
             <div class="mat-button " id="company-data-button">
-                <button mat-raised-button color="primary" 
-                    (click)="saveCompanyData()">Save</button>
-                <!-- <button mat-raised-button color="primary" *ngIf="isClientDataUpdated" (click)="update()">Update</button> -->
+               
+                <button mat-raised-button color="primary"  (click)="update()">Update</button>
                 <button mat-raised-button color="accent" (click)="this.companyForm.reset()"
                     style="margin-left :10px;">Cancel</button>
 

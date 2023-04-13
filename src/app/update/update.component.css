@@ -1,0 +1,78 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+
+  form{
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .ng-container{
+    height: 500px;
+    /* overflow-y: scroll; */
+
+  }
+
+  #company-data-button {
+  
+    text-align: center;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  
+  mat-form-field{
+    width: 100%;
+    
+
+  }
+  #personal-data-button{
+    text-align: right;
+    margin-right:  10px; 
+
+  }
+  .ng-container {
+    
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .mat-card {
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  
+  
+  .col-md-4 {
+    width: calc(100% / 3 - 20px);
+  }
+  
+  
+  
+  textarea {
+    height: 80px;
+  }
+  
+  mat-error {
+    color: red;
+  }
+  
+  mat-card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .title{
+    text-align: center;
+    margin-top: 20px;
+    
+  }
+
+  
